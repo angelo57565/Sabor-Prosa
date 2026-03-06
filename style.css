@@ -1,0 +1,510 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #FCFBE8;
+    color: #512615;
+    scroll-behavior: smooth;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #512615;
+    color: #FCFBE8;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-family: "Clicker Script", cursive;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.categories {
+    display: flex;
+    overflow-x: auto;
+    background: #fff;
+    padding: 10px;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.categories a {
+    text-decoration: none;
+    background: #512615;
+    color: #FCFBE8;
+    padding: 8px 15px;
+    border-radius: 20px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.categories a:hover {
+    transform: scale(1.05);
+}
+
+.container {
+    padding: 15px;
+}
+
+section {
+    font-style: italic;
+    margin-bottom: 40px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.card {
+    display: flex;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card img {
+    width: 120px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-weight: 600;
+}
+
+.card button {
+    align-self: flex-end;
+    margin-top: 8px;
+}
+
+.cart-actions {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+}
+
+.cart-actions button {
+    width: 120px;
+    height: 40px;
+    background: #e45a24;
+    color: #FCFBE8;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.info {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    background: #d68d6f;
+    color: #FCFBE8;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.floating-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    background: #7a2b0c;
+    color: #FCFBE8;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.floating-cart h1 {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.floating-cart:hover {
+    opacity: 0.7;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #512615;
+    color: #FCFBE8;
+}
+
+footer a {
+    color: #FCFBE8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cart-actions {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+}
+
+.cart-actions button {
+    width: 100px;
+    height: 50px;
+    background: #7a2b0c;
+    color: #FCFBE8;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.header {
+    background-image: url('imagens/banner\ madeira.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 0;
+    color: #f2e6d8;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.footer {
+    background-image: url('imagens/banner\ madeira.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FCFBE8;
+    text-align: center;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    font-family: 'Poppins', sans-serif;
+    z-index: 1;
+}
+
+.instagram-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+    .logo {
+        width: 150px;
+        height: auto;
+    }
+    .categories {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .categories a {
+        font-size: 14px;
+    }
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    .footer-content p,
+    .footer-content a {
+        font-size: 14px;
+    }
+}
+
+.cliente-box {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cliente-box input {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.quantidade {
+    width: 60px;
+    padding: 5px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.cliente-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0;
+    font-family: 'Georgia', serif;
+}
+
+.cliente-container label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #512615;
+    letter-spacing: 1px;
+}
+
+#clienteNome {
+    width: 260px;
+    padding: 12px 15px;
+    border-radius: 30px;
+    border: 2px solid #512615;
+    outline: none;
+    font-size: 16px;
+    background-color: #FCFBE8;
+    color: #512615;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+#clienteNome:focus {
+    border-color: #8B4513;
+    box-shadow: 0 0 10px rgba(139, 69, 19, 0.4);
+    transform: scale(1.03);
+}
+
+#clienteNome::placeholder {
+    color: #a67c52;
+    font-style: italic;
+}
+
+.quantidade-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.btn-qtd {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background: #512615;
+    color: #FCFBE8;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-qtd:hover {
+    background: #8B4513;
+    transform: scale(1.1);
+}
+
+.quantidade {
+    width: 50px;
+    text-align: center;
+    border: 2px solid #512615;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 16px;
+    background: #FCFBE8;
+    color: #512615;
+}
+
+.btn-adicionar {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: #512615;
+    color: #FCFBE8;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-adicionar:hover {
+    background: #8B4513;
+    opacity: 0.9;
+}
+
+#clienteCarrinho {
+    font-weight: bold;
+    color: #512615;
+    margin-bottom: 10px;
+}
+
+.cart-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #512615;
+    color: #FCFBE8;
+    padding: 12px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.cart-toggle:hover {
+    background: #8B4513;
+}
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 320px;
+    height: 100%;
+    background: #fffaf0;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.4s ease;
+    z-index: 999;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-sidebar h2 {
+    color: #512615;
+}
+
+#clienteCarrinho {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #8B4513;
+}
+
+.btn-reset,
+.btn-finalizar {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-reset {
+    background: #ccc;
+}
+
+.btn-finalizar {
+    background: #512615;
+    color: #FCFBE8;
+}
+
+.btn-finalizar:hover {
+    background: #8B4513;
+}
+
+select,
+#valorPago {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid #512615;
+    margin-top: 5px;
+    background: #fffaf0;
+    color: #512615;
+}
+
+.controle-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 110x;
+}
+
+.controle-quantidade button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #512615;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.controle-quantidade span {
+    font-weight: bold;
+    font-size: 18px;
+}
